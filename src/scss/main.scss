@@ -1,0 +1,24 @@
+@import "_reset.scss";
+@import "_var.scss";
+html, body{
+    min-width: 320px;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.page{
+    display: flex;
+    width: 100vw;
+
+    & section{
+        width: 100vw;
+        height: 100vh;
+        background-color: #F9FAFC;
+    }
+}
+@import "_mixins.scss";
+@import "_aside.scss";
+@import "_header.scss";
+@import "_messages.scss";
+@import "_friendsMsg.scss";

@@ -1,0 +1,114 @@
+extends _layouts/layout
+
+block content
+    include _partials/sidebar
+    section
+        include _partials/header
+        article.messages
+            article.messages
+                ul.messages__users.list
+                    li.list__friend.friend.active
+                        img.friend__ava(src='dist/images/person1.svg', alt='')
+                        .friend__chat
+                            span.friend__name
+                                | Miranda Hops
+                                .friend__online
+                                img.friend__pin(src='dist/images/pin.svg', alt='')
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                    li.list__friend.friend
+                        img.friend__ava(src='dist/images/person2.svg', alt='')
+                        .friend__chat
+                            span.friend__name Barry Callebaut
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                    li.list__friend.friend
+                        img.friend__ava(src='dist/images/person3.svg', alt='')
+                        .friend__chat
+                            span.friend__name
+                                | Stacey Dosh
+                                .friend__online
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                    li.list__friend.friend
+                        img.friend__ava(src='dist/images/person5.svg', alt='')
+                        .friend__chat
+                            span.friend__name Michael Kors
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                    li.list__friend.friend
+                        img.friend__ava(src='dist/images/person5.svg', alt='')
+                        .friend__chat
+                            span.friend__name
+                                | Johny Cash
+                                .friend__online
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                    li.list__friend.friend
+                        img.friend__ava(src='dist/images/person6.svg', alt='')
+                        .friend__chat
+                            span.friend__name Stacey Dosh
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                    li.list__friend.friend
+                        img.friend__ava(src='dist/images/person6.svg', alt='')
+                        .friend__chat
+                            span.friend__name Stacey Dosh
+                            p.friend__msg Lorem ipsum dolor sit amet consectetur adipisicing.
+                .messages__chat
+                    .search
+                        img(src='dist/images/Shape.svg', alt='')
+                        input.search__input(type='text', placeholder='Search messages...')
+                    ul.dialog
+                        li.dialog__date
+                            p Today, 17.03.2018
+                        li.dialog__message
+                            img.dialog__img(src='dist/images/person1.svg', alt='')
+                            .dialog__body
+                                p On the other hand, we denounce with righteous indignation!
+                                span.dialog__time 01:14
+                        li.dialog__myMessage
+                            .dialog__body
+                                p
+                                    | Which is the same as saying?
+                                span.dialog__time 01:38
+                        li.dialog__message
+                            img.dialog__img(src='dist/images/person1.svg', alt='')
+                            .dialog__body
+                                p
+                                    | But in certain circumstances and owing to the claims of duty or the obligations of business it will
+                                    | frequently occur
+                                    | that pleasures.
+                                span.dialog__time 01:14
+                        li.dialog__myMessage
+                            .dialog__body
+                                p
+                                    | To take a trivial example, which of us ever undertakes)
+                                span.dialog__time 01:38
+                        li.dialog__message
+                            img.dialog__img(src='dist/images/person1.svg', alt='')
+                            .dialog__body
+                                p
+                                    | But in certain circumstances and owing to the claims of duty or the obligations of business it will
+                                    | frequently occur
+                                    | that pleasures.
+                                span.dialog__time 01:14
+                        li.dialog__myMessage
+                            .dialog__body
+                                p
+                                    | To take a trivial example, which of us ever undertakes)
+                                span.dialog__time 01:38
+                        li.dialog__message
+                            img.dialog__img(src='dist/images/person1.svg', alt='')
+                            .dialog__body
+                                p
+                                    | But in certain circumstances and owing to the claims of duty or the obligations of business it will
+                                    | frequently occur
+                                    | that pleasures.
+                                span.dialog__time 01:14
+                        li.dialog__myMessage
+                            .dialog__body
+                                p
+                                    | To take a trivial example, which of us ever undertakes)
+                                span.dialog__time 01:38
+                    .send
+                        textarea.send__input(type='text', placeholder='Write a message...')
+                        .send__img
+                            img(src='dist/images/smile.svg', alt='')
+                            img(src='dist/images/paperClip.svg', alt='')
+                            button.send__msg
+                                img(src='dist/images/send.svg', alt='')

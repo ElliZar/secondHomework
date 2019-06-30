@@ -7,13 +7,12 @@ const browserSync = require('browser-sync').create();
 const doCss = () => {
     return gulp.src("./src/scss/**/*.scss")
         .pipe(scss())
-        .pipe(gulp.dest("dist/css/signIn"))
+        .pipe(gulp.dest("dist/css/"))
         .pipe(browserSync.stream());
-
 }
 
 const views = () => {
-    return gulp.src("./src/templates/*.pug")
+    return gulp.src("./src/templates/index.pug")
         .pipe(pug())
         .pipe(gulp.dest("dist"))
         .pipe(browserSync.stream());
@@ -39,8 +38,8 @@ const watch = () => {
             index: ""
         }
     });
-    gulp.watch("./src/scss/_sign_in/**/*.scss", doCss);
-    gulp.watch("./src/templates/*.pug", views);
+    gulp.watch("./src/scss/**/*.scss", doCss);
+    gulp.watch("./src/templates/index.pug", views);
     gulp.watch("./src/img/*", img);
 }
 exports.doCss = doCss;
