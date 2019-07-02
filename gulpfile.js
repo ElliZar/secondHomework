@@ -10,7 +10,6 @@ const doCss = () => {
         .pipe(gulp.dest("dist/css/"))
         .pipe(browserSync.stream());
 }
-
 const views = () => {
     return gulp.src("./src/templates/index.pug")
         .pipe(pug())

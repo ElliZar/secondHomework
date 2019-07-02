@@ -1,0 +1,60 @@
+- 
+    const userChat = [
+        {
+            friendName: "Miranda Hops",
+            friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            avatar: "./img/person1.svg",
+            pinFriend: true,
+            online: true,
+            active: true
+        },
+        {
+            friendName: "Barry Callebaut",
+            friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            avatar: "./img/person2.svg",
+            pinFriend: false,
+            online: false
+        },
+        {
+            friendName: "Stacey Dosh",
+            friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            avatar: "./img/person3.svg",
+            pinFriend: false,
+            online: true
+        },
+        {
+            friendName: "Michael Kors",
+            friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            avatar: "./img/person4.svg",
+            pinFriend: false,
+            online: false
+        },
+        {
+            friendName: "Johny Cash",
+            friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            avatar: "./img/person5.svg",
+            pinFriend: false,
+            online: true
+        },
+        {
+            friendName: "Stacey Dosh",
+            friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            avatar: "./img/person6.svg",
+            pinFriend: false,
+            online: false
+        },
+    ];
+
+mixin chats(user)
+    li.list__friend.friend.active
+        img.friend__ava(src= user.avatar, alt='')
+        .friend__chat
+            span.friend__name= user.friendName
+                if (user.online)
+                    .friend__online
+                if (user.pinFriend)
+                    img.friend__pin(src= "./img/pin.svg" alt='')
+            p.friend__msg= user.friendMsg
+
+for values in userChat 
+    +chats(values)

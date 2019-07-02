@@ -1,0 +1,86 @@
+- 
+    const dialog = [
+        {
+            dialogMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            toLeftSide: true,
+            toRightSide: false, 
+            avatar: true,
+            avaPath: "./img/person1.svg",
+            time: "01:14"
+        },
+        {
+            dialogMsg: "On the other hand, we denounce with righteous indignation!",
+            toLeftSide: false,
+            toRightSide: true, 
+            avatar: false,
+            time: "01:10"
+        },
+        {
+            dialogMsg: "On the other hand, we denounce with righteous indignation!",
+            toLeftSide: false,
+            toRightSide: true, 
+            avatar: false,
+            time: "01:10"
+        },
+        {
+            dialogMsg: "On the other hand, we denounce with righteous indignation!",
+            toLeftSide: false,
+            toRightSide: true, 
+            avatar: false,
+            time: "01:10"
+        },
+         {
+            dialogMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            toLeftSide: true,
+            toRightSide: false, 
+            avatar: true,
+            avaPath: "./img/person1.svg",
+            time: "01:14"
+        },
+        {
+            dialogMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            toLeftSide: true,
+            toRightSide: false, 
+            avatar: true,
+            avaPath: "./img/person1.svg",
+            time: "01:14"
+        },
+        {
+            dialogMsg: "On the other hand, we denounce with righteous indignation!",
+            toLeftSide: false,
+            toRightSide: true, 
+            avatar: false,
+            time: "01:10"
+        },
+         {
+            dialogMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            toLeftSide: true,
+            toRightSide: false, 
+            avatar: true,
+            avaPath: "./img/person1.svg",
+            time: "01:14"
+        },
+         {
+            dialogMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+            toLeftSide: true,
+            toRightSide: false, 
+            avatar: true,
+            avaPath: "./img/person1.svg",
+            time: "01:14"
+        },
+    ];
+mixin dialogs(item)
+    if (item.toLeftSide && item.toRightSide === false)
+        li.dialog__message
+            img.dialog__img(src= item.avaPath, alt='')
+            .dialog__body
+                p= item.dialogMsg
+                span.dialog__time= item.time
+    else
+        li.dialog__myMessage
+            .dialog__body
+                p= item.dialogMsg
+                span.dialog__time= item.time
+
+for values in dialog 
+    +dialogs(values)
