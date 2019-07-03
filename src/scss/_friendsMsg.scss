@@ -8,7 +8,7 @@
         height: 16.6%;
         display: flex;
         align-items: center;
-        @include mdSmartphone{
+        @include Smartphone{
             padding-top: 25px;
             padding-bottom: 25px;
         }

@@ -4,7 +4,7 @@
     background-color: #01134E;
     display: flex;
     flex-direction: column;
-    @include mdSmartphone{
+    @include Smartphone{
         width: 60px;
         display: none;
     }
@@ -25,6 +25,10 @@
             padding-right: 20px;
             padding-left: 20px;
         }
+    }
+    &--active{
+        display: flex;
+        position: relative;
     }
 }
 .menu{
@@ -50,7 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include mdSmartphone{
+    @include Smartphone{
         top: 55%;
         left: 2%;
     }
@@ -66,7 +70,7 @@
     top: 55px;
     left: -25px;
     border-radius: 5px;
-    @include mdSmartphone{
+    @include Smartphone{
         display: none;
     }
 }

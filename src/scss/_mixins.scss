@@ -1,8 +1,5 @@
-@mixin smallSmartphone{
-    @media (min-width: 401px) and (max-width: 480px)  {@content}
-};
-@mixin mdSmartphone{
-    @media (min-width: 401px) and (max-width: 480px)  {@content}
+@mixin Smartphone{
+    @media (min-width: 320px) and (max-width: 480px)  {@content}
 };
 @mixin smallOnTablet {
     @media (min-width: 481px) and (max-width: 767px)  {@content}
@@ -10,3 +7,21 @@
 @mixin onTablet {
     @media (min-width: 768px) and (max-width: 1024px)  {@content}
 };
+
+@mixin burgerLineCustom{
+    .header__top, .header__bottom {
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 49px;
+        border-radius: 2px;
+        background: $color;
+      }
+}
+@mixin burgerAnimate{
+    .header__top, .header__bottom {
+        transform-origin: 34px 2px;
+        transform: rotate( 0deg ); // to prevent pixelatedness
+        transition: all $animation * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); // x to = animation
+      }
+}

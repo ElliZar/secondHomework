@@ -1,13 +1,20 @@
-const burger = document.querySelector(".burger");
-const sidebar=document.querySelector(".sidebar");
-const logo=document.querySelector(".logo");
+const headerHamburger = document.querySelector(".hamburger");
+let isClosed = true;
+const sidebar = document.querySelector(".sidebar");
 
-burger.addEventListener("click", showMenu);
-logo.addEventListener("click", hideMenu);
+headerHamburger.addEventListener("click", burgerTime);
 
-function showMenu(){
-  sidebar.classList.toggle("show");
-}
-function hideMenu(){
-  sidebar.classList.remove("show");
+function burgerTime(){
+  if(isClosed== true){
+    headerHamburger.classList.remove("is-open");
+    headerHamburger.classList.add("is-closed");
+    isClosed = false;
+    sidebar.classList.add("sidebar--active");
+  }
+  else{
+    headerHamburger.classList.remove("is-closed");
+    headerHamburger.classList.add("is-open");
+    isClosed = true;
+    sidebar.classList.remove("sidebar--active");
+  }
 }
