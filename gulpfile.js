@@ -3,6 +3,7 @@ const scss = require("gulp-sass");
 const pug = require("gulp-pug");
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
+const uglify = require('gulp-uglify-es').default;
 
 const doCss = () => {
     return gulp.src("./src/scss/**/*.scss")
@@ -24,10 +25,11 @@ const img = () => {
         .pipe(browserSync.stream());
 }
 
-const build = async () => {
-    await doCss();
-    await views();
-    await img();
+const minify = () => {
+    return gulp.src("./src/js/**/*.js")
+        .pipe(uglify())
+        .pipe(gulp.dest("dist/js"))
+        .pipe(browserSync.stream());
 }
 
 const watch = () => {
@@ -39,10 +41,20 @@ const watch = () => {
     });
     gulp.watch("./src/scss/**/*.scss", doCss);
     gulp.watch("./src/templates/index.pug", views);
+    gulp.watch("./src/js/**/*.js", minify)
     gulp.watch("./src/img/*", img);
 }
+
+const build = async () => {
+    await doCss();
+    await views();
+    await img();
+    await minify();
+}
+
 exports.doCss = doCss;
 exports.views = views;
+exports.minify = minify;
 exports.img = img;
 exports.build = build;
 exports.watch = watch;

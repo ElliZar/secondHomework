@@ -5,8 +5,7 @@
             friendMsg: "Lorem ipsum dolor sit amet consectetur adipisicing.",
             avatar: "./img/person1.svg",
             pinFriend: true,
-            online: true,
-            active: true
+            online: true
         },
         {
             friendName: "Barry Callebaut",
@@ -44,10 +43,9 @@
             online: false
         },
     ];
-
 mixin chats(user)
-    li.list__friend.friend.active
-        img.friend__ava(src= user.avatar, alt='')
+    li.list__friend.friend
+        img.friend__ava(src= user.avatar, alt="")
         .friend__chat
             span.friend__name= user.friendName
                 if (user.online)

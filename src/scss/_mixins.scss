@@ -1,9 +1,12 @@
-@mixin responds_480px {
+@mixin smallSmartphone{
     @media (min-width: 401px) and (max-width: 480px)  {@content}
 };
-@mixin responds_768px {
-    @media (min-width: 481px) and (max-width: 768px)  {@content}
+@mixin mdSmartphone{
+    @media (min-width: 401px) and (max-width: 480px)  {@content}
 };
-@mixin responds_1024px {
+@mixin smallOnTablet {
+    @media (min-width: 481px) and (max-width: 767px)  {@content}
+};
+@mixin onTablet {
     @media (min-width: 768px) and (max-width: 1024px)  {@content}
 };

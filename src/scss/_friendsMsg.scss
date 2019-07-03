@@ -1,14 +1,14 @@
 .list{
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #EDF0F4;
-    border-bottom: 1px solid #EDF0F4;
+    border-right: 2px solid #EDF0F4;
+    border-top:  2px solid rgba(3, 74, 95, 0.5);
 
     &__friend{
         height: 16.6%;
         display: flex;
         align-items: center;
-        @include responds_480px{
+        @include mdSmartphone{
             padding-top: 25px;
             padding-bottom: 25px;
         }
@@ -20,14 +20,14 @@
     &__chat{
         padding-left: 15px;
         width: 70%;
-        @include responds_768px{
+        @include smallOnTablet{
             display: none;
         }
     }
     &__ava{
         display: block;
         margin-left: 20px;
-        @include responds_1024px{
+        @include onTablet{
             margin-left: 10px;
         }
     }
