@@ -7,8 +7,13 @@
     &__menu{
         width: 150px;
         align-items: center;
+        margin-left: 5%;
         display: flex;
         justify-content: space-around;
+        @include Smartphone{
+            margin-left: 0%;
+            // margin-right: ;
+        }
     }
     &__item{
         font-family: $roboto;
@@ -54,12 +59,19 @@
     display: flex;
     width: 200px;
     justify-content: space-between;
+    margin-left: 65%;
     align-items: center;
     padding-right: 30px;
     @include Smartphone{
         width: 45px;
         padding-right: 0;
         margin-left: 20%;
+    }
+    @include onTablet{
+        margin-left: 45%;
+    }
+    @include smallOnTablet{
+        margin-left: 20%;   
     }
     &__img{
         display: block;

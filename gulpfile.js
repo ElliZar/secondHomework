@@ -4,10 +4,17 @@ const pug = require("gulp-pug");
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify-es').default;
+const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require("gulp-autoprefixer");
 
 const doCss = () => {
     return gulp.src("./src/scss/**/*.scss")
         .pipe(scss())
+        .pipe(autoprefixer({
+            overrideBrowserslist: ["last 3 version"],
+            cascade: false
+        }))
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css/"))
         .pipe(browserSync.stream());
 }

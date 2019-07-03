@@ -28,7 +28,10 @@
     }
     &--active{
         display: flex;
-        position: relative;
+        height: 100vh;
+        position: absolute;
+        width: 46px;
+        z-index: 30;
     }
 }
 .menu{

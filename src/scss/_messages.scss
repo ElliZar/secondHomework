@@ -75,17 +75,25 @@
     &__message{
         margin-left: 5%;
         display: flex;
-        width: 90%;
+        width: 70%;
         margin-bottom: 5%;
         justify-content: flex-start;
         position: relative;
+        @include smallOnTablet{
+            width: 90%;
+        }
     }
     &__myMessage{
         padding-bottom: 50px;
         display: flex;
-        width: 90%;
+        width: 70%;
         justify-content: flex-end;
         position: relative;
+        margin-left: 25%;
+        @include smallOnTablet{
+            width: 95%;
+            margin-left: 0%;
+        }
     }
     &__body{
         margin-left: 50px;
