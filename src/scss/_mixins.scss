@@ -9,11 +9,11 @@
 };
 
 @mixin burgerLineCustom{
-    .header__top, .header__bottom {
+    .header__top, .header__bottom,.header__center {
         position: absolute;
         display: block;
         height: 4px;
-        width: 49px;
+        width: 35px;
         border-radius: 2px;
         background: $color;
       }
@@ -23,5 +23,5 @@
         transform-origin: 34px 2px;
         transform: rotate( 0deg ); // to prevent pixelatedness
         transition: all $animation * (2/3) cubic-bezier(.8, -1.1, .5, 1.9); // x to = animation
-      }
+    }
 }

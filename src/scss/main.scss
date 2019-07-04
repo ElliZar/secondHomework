@@ -1,5 +1,6 @@
 @import "_reset.scss";
 @import "_var.scss";
+@import"_scrollbar.scss";
 html, body{
     min-width: 320px;
 }
@@ -20,5 +21,5 @@ a{
 @import "_mixins.scss";
 @import "_aside.scss";
 @import "_header.scss";
-@import "_messages.scss";
+@import "_dialog.scss";
 @import "_friendsMsg.scss";

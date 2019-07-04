@@ -14,7 +14,7 @@ const doCss = () => {
             overrideBrowserslist: ["last 3 version"],
             cascade: false
         }))
-        // .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("dist/css/"))
         .pipe(browserSync.stream());
 }

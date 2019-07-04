@@ -1,0 +1,6 @@
+.simplebar-scrollbar::before{
+    content: "";
+    background: linear-gradient(to top, #160075, #20d3bb);
+    width: 5px;
+    margin-left: 5px;
+}
